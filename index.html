@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<body>
+    <div class="weather-app">
+
+        <div class="container">
+
+            <div class="link">
+                <p>
+                    by
+                    <a href="https://github.com/iamhusniddin" target="_blank">
+                      Husniddin Hamidov
+                    </a>
+                  </p>
+            </div>
+           <div class="container_div">
+            <h1 class="temp">16&#176;</h1>
+            <div class="city-time">
+                <h1 class="name">London</h1>
+            </div>
+           
+
+            <div class="waether">
+                <img src="./img/icon/sun.png" class="icon" width=30" height="30" alt="icon">
+                <span class="condition">Cloudy</span>
+            </div>
+
+           </div>
+
+        </div>
+        <!-- containerdiv ended -->
+
+        <div class="panel">
+            <form id="locationInput">
+                <input name="city" type="text" class="search" placeholder="Search Location...">
+                <button type="submit" class="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <ul class="cities">
+                <li id="city" class="city ">London</li>
+                <li id="country" class="city">Great Britain</li>
+            </ul>
+
+            <ul class="weather details">
+                <h4 class="details">Weather Details</h4>
+                <li class="weather_inner">
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">75%</span>
+                </li>
+                    <li>
+                        <span>Wind</span>
+                        <span class="wind">7km/h</span>
+                    </li>
+            </ul>
+        </div>
+       <!-- panel_div_ended -->
+
+    </div>
+
+
+
+   <script src="./main.js"></script>
+</body>
+</html>

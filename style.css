@@ -1,0 +1,300 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h3 {
+  font-weight: 400;
+}
+
+.link p {
+  font-size: 20px;
+  color: rgb(206, 121, 17);
+}
+
+.link p a {
+  color: white;
+}
+
+.link p a:hover {
+  color: #ccc;
+}
+
+.weather-app {
+  min-height: 100vh;
+  background-image: url(./img/night/night_cloudy\ img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  position: relative;
+  transition: 500ms;
+  opacity: 1; /* change to 0  once the
+     whole app is finished*/
+}
+
+.weather-app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 32px 50px 64px 50px;
+}
+
+.container_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.city-time,
+.temp,
+.waether {
+  margin: 0 16px;
+}
+
+.name {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 4em;
+}
+
+.temp {
+  font-size: 110px;
+  margin: 0;
+}
+
+.icon {
+  display: block;
+  margin: 10px 7px;
+}
+
+form {
+  margin-bottom: 3em;
+}
+
+.search {
+  background: none;
+  border: none;
+  border-bottom: 1px rgb(226, 228, 230) solid;
+  padding: 0 1em 0.5em 0;
+  width: 80%;
+  color: white;
+  font-size: 1.1em;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  font-size: 20px;
+  color: rgb(212, 209, 209);
+}
+
+.submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: rgb(206, 121, 17);
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.submit:active {
+  background-color: rgb(151, 150, 150);
+  color: rgb(39, 72, 206);
+}
+
+.panel {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(110, 110, 110, 0.2);
+  box-shadow: 0 7px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  padding: 43px 28px;
+  overflow-y: scroll;
+}
+
+.panel ul {
+  padding: 0 0 1em 0;
+  margin: 2em 0;
+  border-bottom: 1px #ccc solid;
+}
+
+li {
+  color: rgb(207, 204, 204);
+  list-style-type: none;
+  margin: 2.5em 0;
+  font-size: 20px;
+}
+
+.details {
+  margin: 2.2em 0;
+  font-size: 25px;
+}
+
+.details:hover {
+  color: #ccc;
+}
+
+.city {
+  display: block;
+  cursor: pointer;
+}
+
+.city:hover {
+  color: white;
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details li :hover {
+  color: white;
+}
+
+.condition {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .panel,
+  .container {
+    position: relative;
+    width: 100%;
+    top: initial;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+  .search {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container_div {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .waether{
+    margin-left: 0 ;
+    
+  }
+  
+  #locationInput {
+    padding-top: 10px;
+  }
+
+  .temp {
+    font-size: 60px;
+  }
+  .condition {
+    width: 100px;
+    font-size: 2em;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .condition {
+    width: 100px;
+    font-size: 2em;
+    margin: 0;
+  }
+  .name{
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container_div {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .temp {
+    font-size: 60px;
+  }
+  
+  .condition {
+    width: 100px;
+    font-size: 2em;
+    margin: 0;
+  }
+  .city-time {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .container_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .temp {
+    padding-right: 15px;
+    font-size: 40px;
+  }
+  .name {
+    font-size: 35px;
+  }
+  .condition {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .weather-app {
+    min-height: 40em;
+  }
+}
